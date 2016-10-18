@@ -3,7 +3,7 @@
 # Cleanly quit bspwm
 super + shift + q
 	bspc quit 1 && pkill lemonpanel && pkill lemonbar
-	
+
 # Toggle panels
 super + shift + space
 	{pkill lemonpanel; pkill lemonbar; pkill cat; pkill stalonetray; bspc config top_padding $((-$gap)) ,\
@@ -12,10 +12,12 @@ super + shift + space
 # Show keybindings
 super + F1
 	$TERMINAL -e keybindings.sh
-#
-# Window manipulation
-# ______________
+
+
 ###############################################################################
+########################### Действия над окнами ###############################
+###############################################################################
+
 
 # Close window
 super + x
@@ -36,10 +38,10 @@ super + ctrl + t
 # Force all windows of the desktop to float and arrange them
 super + ctrl + shift + t
 	bspcp float
-	
+
 # Toggle fullscreen
-super + shift + f 
-	bspc node -t {fullscreen,tiled}	
+super + shift + f
+	bspc node -t {fullscreen,tiled}
 
 # Try to keep size and position of the selected window
 super + o
@@ -51,7 +53,7 @@ super + i
 
 # Lock a window from closing
 super + Escape
-	bspc node -g locked 
+	bspc node -g locked
 
 ### Map or unmap windows (functional equivalent of "minimize")
 super + c
@@ -63,9 +65,9 @@ super + shift + c
 super + ctrl + c
     whid last
 
-#
-# Window moving and splitting
-# ______________    
+###############################################################################
+###################### Перемещение и деление окон #############################
+###############################################################################
 
 # Autopresel (split window in its largest dimension)
 super + ctrl + Return
@@ -73,7 +75,7 @@ super + ctrl + Return
 
 ctrl + space
 	auto-presel
-	
+
 # Presel window for splitting in certain direction
 alt + ctrl + {a,s,w,d}
 	bspc node -p \~{west,south,north,east}
@@ -96,7 +98,7 @@ alt + shift + {Left,Down,Up,Right}
 # Set splitting ratio of windows
 alt + ctrl + {1-9}
 	bspc node -o 0.{1-9}
-		
+
 # Move current window to largest space or preselected area if there is one.
 super + Return
     windowpromoter
@@ -104,7 +106,7 @@ super + Return
 # Create a new "master area", splitting the whole desktop instead of just windows.
 alt + Return
 	bspc node -n @/
-	
+
 # go (Shift=move) to desktop (and focus the monitor that the desktop is located on. Bspwm style)
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} ^{1-9,10}
@@ -124,7 +126,7 @@ super + {_,shift + }{1-9,0}
 
 # Select previous / next desktop
 super + {m,n}
-	bspc desktop -f {prev.occupied,next.occupied} 
+	bspc desktop -f {prev.occupied,next.occupied}
 
 # cycle windows
 alt + {_,shift + }Tab
@@ -134,7 +136,7 @@ alt + {_,shift + }Tab
 super + Tab
     rofi -show window -config ~/.local/rofi/config
 #	WindowSelector
-	
+
 #Focus windows by direction, works with multihead
 super +  {a,s,w,d}
     focusmover {west,south,north,east}
@@ -144,20 +146,20 @@ super +  {h,j,k,l}
 
 super +  {Left,Down,Up,Right}
     focusmover {west,south,north,east}
-        	
-# Move tiled windows. Moving a tiled window to 
-# preselected one moves into preselection instead. 
+
+# Move tiled windows. Moving a tiled window to
+# preselected one moves into preselection instead.
 # Moving out of the screen should move the window to next monitor if possible
 #super + shift + {a,s,w,d}
 #	windowgrabber {west,south,north,east}
 
 #super + shift + {h,j,k,l}
 #	windowgrabber {west,south,north,east}
-	
+
 # Different style of movement: transplant into window in chosen direction
 super + shift + {Left,Down,Up,Right}
 	windowgrabber {west,south,north,east}
-	
+
 
 #resize windows
 super + ctrl + {a,s,w,d}
@@ -165,18 +167,18 @@ super + ctrl + {a,s,w,d}
 
 super + ctrl + {h,j,k,l}
 	bspwm_resize.sh {west,south,north,east}
-	
+
 super + ctrl + {Left,Down,Up,Right}
 	bspwm_resize.sh {west,south,north,east}
 
-#
-# Layout manipulation/desktop level controls
-# ______________    
+###############################################################################
+######### Действия над layout/desktop level controls  #########################
+###############################################################################
 
 # Toggle monocle mode
-super + f 
+super + f
 	bspc desktop -l next
-	
+
 # Balance tree
 super + b
 	bspc node @/ -B
@@ -184,7 +186,7 @@ super + b
 # Balance brother node. If you do this on biggest window of the desktop, it usually means balancing all windows with except the biggest.
 super + alt + b
 	bspc node @brother -B
-	
+
 # Undo balancing (equalize windows)
 super + ctrl + b
 	bspc node @/ -E
@@ -196,7 +198,7 @@ alt + b
 # Mirror and flip leaves of tree
 super + {comma,period}
 	bspc node @/ -F {horizontal,vertical}
-	
+
 # Rotate leaves of tree
 super + shift + {comma,period}
 	bspc node @/ -R {270,90g}
@@ -229,7 +231,7 @@ super + button{1-3}
 
 super + @button{1-3}
 	bspc pointer -u
-# Needed to focus windows by clicking, if you wish to disable 
+# Needed to focus windows by clicking, if you wish to disable
 # focus_follows_mouse behavior (required to use menu of xfdesktop, whiskermenu or click java apps)
 ~button1
 	bspc pointer -g focus && xdo raise $(pfw)
@@ -243,10 +245,10 @@ super + ctrl + button5
 super + ctrl + button4
     bspcp dsktp add
 
-# Spawn applications popup menu and manually tile selected 
+# Spawn applications popup menu and manually tile selected
 # app where your mouse was when you opened the menu. Smartsplit only chooses
 # biggest dimension of the window, MouseLaunch only cares which edge is closer.
-# mod5 is alt_gr (first key right from space) on most keyboards. 
+# mod5 is alt_gr (first key right from space) on most keyboards.
 #mod5 + @button1
 #   MouseLaunch ; mygtkmenui -- .config/GTKmenu/LaunchMenu
 #	smartsplit ; dboxmenu
@@ -257,7 +259,7 @@ super + ctrl + button4
 #    BspwmWindowMenu
 #    mygtkmenui -- .config/GTKmenu/BspwmWindowMenui
 
-# These two are needed if you want to use xfdesktops menus while 
+# These two are needed if you want to use xfdesktops menus while
 # focus_follows_pointer is on
 #@button3
 #	clickpasser 3
@@ -275,7 +277,7 @@ super + ctrl + button4
 ### Three finger swipe (up) to launch dswitcher
 @button8
     dswitcher & xdotool mousemove 640 400
-    
+
 #
 # spawn programs
 #
@@ -285,7 +287,7 @@ super + space
 	dmouse
 
 alt + d
-	dmenu_recent #-y 350 -h 25 -x 300 -w 800 -o 0.9 -fn "Ubuntu-12:normal" -nb '#000000' -nf '#ffffff' -sb '#F57900' -sf '#002b36' 
+	dmenu_recent #-y 350 -h 25 -x 300 -w 800 -o 0.9 -fn "Ubuntu-12:normal" -nb '#000000' -nf '#ffffff' -sb '#F57900' -sf '#002b36'
 
 alt + m
     morc_menu
@@ -297,13 +299,13 @@ super + shift + Return
 	$TERMINAL
 super + z
 	xfce4-terminal -x fish
-	
+
 super + r
 	finder
 
 super + shift + b`
 	$BROWSER
-    		
+
 super + e
 	spacefm
 
@@ -313,7 +315,7 @@ super + shift + e
 Print
 	scrot -q 100
 
-	
+
 #
 # Media keys
 #
