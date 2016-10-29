@@ -75,19 +75,9 @@ ctrl + space
 	auto-presel
 
 # Presel window for splitting in certain direction
-
 alt + ctrl + {Left,Down,Up,Right}
 	bspc node -p \~{west,south,north,east}
 
-# Presel the desktop for splitting in certain direction
-alt + shift + {a,s,w,d}
-	bspc node @/ -p \~{west,south,north,east}
-
-alt + shift + {h,j,k,l}
-	bspc node @/ -p \~{west,south,north,east}
-
-alt + shift + {Left,Down,Up,Right}
-	bspc node @/ -p \~{west,south,north,east}
 # Set splitting ratio of windows
 alt + ctrl + {1-9}
 	bspc node -o 0.{1-9}
@@ -104,19 +94,6 @@ alt + Return
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} ^{1-9,10}
 
-## Alternative: i3 style behavior (focus nth, desktop of the focused monitor)
-#super + {1-9,0}
-#	focusdesktopofthismonitor {1-9}
-#super + shift + {1-9,0}
-#	movetodesktopofthismonitor {1-9,10}
-
-## Another alternative: xmonad style desktops. You have 10 desktops shared between all monitors,
-## and focusing a desktop focuses it on the currently focused monitor
-#super + {1-9,0}
-#	summondesktop.sh {1-9,10}
-#super + shift + {1-9,0}
-#	bspc node -d ^{1-9,10}
-
 # Select previous / next desktop
 super + {m,n}
 	bspc desktop -f {prev.occupied,next.occupied}
@@ -128,45 +105,22 @@ alt + {_,shift + }Tab
 # Go to specific window
 super + Tab
     rofi -show window -config ~/.local/rofi/config
-#	WindowSelector
 
 #Focus windows by direction, works with multihead
-super +  {a,s,w,d}
-    focusmover {west,south,north,east}
-
-super +  {h,j,k,l}
-    focusmover {west,south,north,east}
 
 super +  {Left,Down,Up,Right}
     focusmover {west,south,north,east}
-
-# Move tiled windows. Moving a tiled window to
-# preselected one moves into preselection instead.
-# Moving out of the screen should move the window to next monitor if possible
-#super + shift + {a,s,w,d}
-#	windowgrabber {west,south,north,east}
-
-#super + shift + {h,j,k,l}
-#	windowgrabber {west,south,north,east}
 
 # Different style of movement: transplant into window in chosen direction
 super + shift + {Left,Down,Up,Right}
 	windowgrabber {west,south,north,east}
 
-
 #resize windows
-super + ctrl + {a,s,w,d}
-	bspwm_resize.sh {west,south,north,east}
-
-super + ctrl + {h,j,k,l}
-	bspwm_resize.sh {west,south,north,east}
 
 super + ctrl + {Left,Down,Up,Right}
 	bspwm_resize.sh {west,south,north,east}
 
-###############################################################################
-######### Действия над layout/desktop level controls  #########################
-###############################################################################
+######### Действия над layout/desktop level controls  #################
 
 # Toggle monocle mode
 super + f
@@ -175,10 +129,6 @@ super + f
 # Balance tree
 super + b
 	bspc node @/ -B
-
-# Balance brother node. If you do this on biggest window of the desktop, it usually means balancing all windows with except the biggest.
-super + alt + b
-	bspc node @brother -B
 
 # Undo balancing (equalize windows)
 super + ctrl + b
