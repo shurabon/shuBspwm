@@ -14,9 +14,9 @@ super + F1
 	$TERMINAL -e keybindings.sh
 
 
-###############################################################################
-########################### Действия над окнами ###############################
-###############################################################################
+
+############## Действия над окнами ###############
+
 
 
 # Close window
@@ -65,23 +65,16 @@ super + shift + c
 super + ctrl + c
     whid last
 
-###############################################################################
-###################### Перемещение и деление окон #############################
-###############################################################################
+
+######### Перемещение и деление окон ##############
+
 
 # Autopresel (split window in its largest dimension)
-super + ctrl + Return
-	auto-presel
 
 ctrl + space
 	auto-presel
 
 # Presel window for splitting in certain direction
-alt + ctrl + {a,s,w,d}
-	bspc node -p \~{west,south,north,east}
-
-alt + ctrl + {h,j,k,l}
-	bspc node -p \~{west,south,north,east}
 
 alt + ctrl + {Left,Down,Up,Right}
 	bspc node -p \~{west,south,north,east}
