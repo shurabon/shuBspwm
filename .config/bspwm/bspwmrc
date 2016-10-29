@@ -43,7 +43,7 @@ bspc config auto_alternate true
 bspc config auto_cancel true
 bspc config split_ratio         0.52
 
-bspc monitor -d      
+bspc monitor -d       
 
 
 ###This creates and names desktops for multiple monitors.
@@ -87,8 +87,8 @@ bspc rule -a tint2 border=off manage=off
 #bspc desktop II --layout monocle
 bspc rule -a vivaldi-stable desktop=^1 #state=fullscreen
 bspc rule -a Xfce4-terminal desktop=^2 follow=on
-#bspc rule -a VirtualBox desktop=^4 state=fullscreen 
-bspc rule -a Brackets state=pseudo_tiled   
+#bspc rule -a VirtualBox desktop=^4 state=fullscreen
+bspc rule -a Brackets state=pseudo_tiled
 bspc rule -a vokoscreen state=pseudo_tiled
 
 
@@ -97,10 +97,10 @@ bspc rule -a vokoscreen state=pseudo_tiled
 ##  windows on the desktop. Using it disables negative window gap.
 #autogap &
 
-##  This script balances all windows when new one is spawned 
+##  This script balances all windows when new one is spawned
 #euclid_balancer &
 
-##Edge-switcher switches to next workspace when moves moves to the 
+##Edge-switcher switches to next workspace when moves moves to the
 ##edge of the monitor (behavior similar to enlightenment)
 #edge-switcher &
 
