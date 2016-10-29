@@ -90,6 +90,7 @@ bspc rule -a Xfce4-terminal desktop=^2 follow=on
 #bspc rule -a VirtualBox desktop=^4 state=fullscreen
 bspc rule -a Brackets state=pseudo_tiled
 bspc rule -a vokoscreen state=pseudo_tiled
+bspc rule -a Atom desktop=^4
 
 
 
