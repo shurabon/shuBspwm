@@ -238,6 +238,9 @@ alt + m
 alt + x
     rofi -show run -config ~/.local/rofi/config
 
+alt + s
+    xprop |awk '/WM_CLASS/{print $4}'
+
 super + shift + Return
 	$TERMINAL
 super + z
