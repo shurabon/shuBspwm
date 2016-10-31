@@ -239,7 +239,7 @@ alt + x
     rofi -show run -config ~/.local/rofi/config
 
 alt + s
-    xprop |awk '/WM_CLASS/{print $4}'
+    ~/.config/bspwm/propx.sh
 
 super + shift + Return
 	$TERMINAL
