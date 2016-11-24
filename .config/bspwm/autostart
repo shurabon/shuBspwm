@@ -56,7 +56,7 @@ sleep 1 && ~/.config/bspwm/panel/panel_p.sh &
 ## Run screenlock when suspending
 i3lock-wait-for-suspend &
 ## multimonitor support. Save monitor configurations with "autorandr.sh --save <profile>"
-srandrd atorandr.sh --change
+#srandrd atorandr.sh --change
 ## Notify about package updates
 #update-checker 7200 &
 #dockx &

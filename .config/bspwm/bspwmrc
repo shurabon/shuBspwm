@@ -87,7 +87,7 @@ bspc rule -a tint2 border=off manage=off
 #bspc desktop II --layout monocle
 bspc rule -a vivaldi-stable desktop=^1 #state=fullscreen
 bspc rule -a Xfce4-terminal desktop=^2 follow=on
-bspc rule -a VirtualBox desktop=^5 state=floating center=true
+bspc rule -a VirtualBox desktop=^5 state=floating
 bspc rule -a Brackets state=pseudo_tiled
 bspc rule -a vokoscreen state=pseudo_tiled
 bspc rule -a Atom desktop=^4
