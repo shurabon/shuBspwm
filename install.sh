@@ -17,16 +17,6 @@ while read i;
    fi    
  done < dotfiles.txt
 
-#for i in /.config/bspwm/bspwmrc /.config/sxhkd/sxhkdrc /.config/bspwm/propx.sh /.config/bspwm/panel/panel_bar.sh /.config/bspwm/panel/panel_colors.sh /.config/bspwm/panel/panel_p.sh
-# do
-   
-#   if [ -f $HOME$i ]; then
-#      rm -f $HOME$i
-#      ln -s $PWD$i $HOME$i
-#   else
-#      ln -s $PWD$i $HOME$i
-#   fi   
-# done
 
 
 
