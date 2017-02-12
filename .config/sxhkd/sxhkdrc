@@ -123,8 +123,8 @@ super + ctrl + {Left,Down,Up,Right}
 ######### Действия над layout/desktop level controls  #################
 
 # Toggle monocle mode
-super + f
-	bspc desktop -l next
+#super + f
+#	bspc desktop -l next
 
 # Balance tree
 super + b
@@ -230,7 +230,7 @@ super + space
 	dmouse
 
 alt + d
-	dmenu_recent #-y 350 -h 25 -x 300 -w 800 -o 0.9 -fn "Ubuntu-12:normal" -nb '#000000' -nf '#ffffff' -sb '#F57900' -sf '#002b36'
+	dmenu_recent -y 350 -h 25 -x 300 -w 800 -o 70 -fn "Ubuntu-12:normal" -nb '#000000' -nf '#ffffff' -sb '#F57900' -sf '#002b36'
 
 alt + m
     morc_menu
@@ -244,7 +244,7 @@ alt + s
 super + shift + Return
 	$TERMINAL
 super + z
-	xfce4-terminal -x fish
+	xfce4-terminal #-x fish
 
 super + r
 	finder

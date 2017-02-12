@@ -50,7 +50,7 @@ bspc monitor -d       
 #workspaces_multimonitor &
 
 bspc rule -a screenkey --unmanage
-bspc rule -a sublime_text desktop=^5
+#bspc rule -a sublime_text desktop=^5
 bspc rule -a gcolor2 state=floating center=true
 bspc rule -a lxappearance state=floating center=true
 bspc rule -a gmrun state=floating center=true
@@ -118,3 +118,4 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #Source autostartfile. Uncomment this if you use bspwm-git
 #. $HOME/.config/bspwm/autostart
 #.reader.sh | lemonbar -f "fontawesome:size=18" -f "Cantarell:size=14" -g 1255x30+10+8 -p -u 4 &
+~/.config/bspwm/panel/panel_p.sh &
