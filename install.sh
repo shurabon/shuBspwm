@@ -4,6 +4,9 @@
 # для автостарта иксов добавить [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx в нижнюю часть ~/.bash_profile  
 # установка необходимых компонентов 
 
+sudo pacman -S bspwm sxhkd-git compton 
+yaourt -S lemonbar-xft-git ttf-font-awesome dmenu2
+
 # acpi compton 
 
 #mkdir $HOME/.config/bspwm/panel
