@@ -7,9 +7,10 @@
 sudo pacman -S compton 
 yaourt -S bspwm-git sxhkd-git lemonbar-xft-git ttf-font-awesome dmenu2 neofetch-git --noconfirm
 
-mkdir ~/.config/bspwm/
-mkdir ~/.config/bspwm/panel
-mkdir ~/.config/sxhkd/
+mkdir $HOME/.config
+mkdir $HOME/.config/bspwm/
+mkdir $HOME/.config/bspwm/panel
+mkdir $HOME/.config/sxhkd/
 
 
 
