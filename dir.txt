@@ -1,0 +1,4 @@
+/.config
+/.config/bspwm/
+/.config/bspwm/panel
+/.config/sxhkd/

@@ -4,4 +4,4 @@
 /.config/bspwm/panel/panel_bar.sh
 /.config/bspwm/panel/panel_colors.sh
 /.config/bspwm/panel/panel_p.sh
-.xinitrc
+/.xinitrc
