@@ -19,28 +19,22 @@ fi
 
 
 
-xsetroot -cursor_name left_ptr &
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
+#xsetroot -cursor_name left_ptr &
+#export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
-compton -b --vsync drm &
+compton -b &
 nitrogen --restore &
-devmon &
-i3lock-wait-for-suspend &
-setxkbmap "us,ru" ",winkeys" "grp:caps_toggle" &
+#devmon &
+#i3lock-wait-for-suspend &
+#setxkbmap "us,ru" ",winkeys" "grp:caps_toggle" &
 
 
-#DMENU_FN="Terminus-15"
-#DMENU_NB="#000000"
-#DMENU_NF="#99CC99"
-#DMENU_SB="#99CC99"
-#DMENU_SF="#000000"
-#DMENU_OPTIONS="-fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMENU_SB"
-#export DMENU_FN DMENU_NB DMENU_NF DMENU_SF DMENU_SB DMENU_OPTIONS
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-if [ -x /usr/bin/xdg-user-dirs-update ]; then
+
+#export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+#if [ -x /usr/bin/xdg-user-dirs-update ]; then
 
    /usr/bin/xdg-user-dirs-update
-fi
+#fi
 
  #Bspwm is kept as default
 session=${1:-bspwm}
