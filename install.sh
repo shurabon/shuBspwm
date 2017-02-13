@@ -4,8 +4,8 @@
 # для автостарта иксов добавить [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx в нижнюю часть ~/.bash_profile  
 # установка необходимых компонентов 
 
-#sudo pacman -S compton 
-#yaourt -S bspwm-git sxhkd-git lemonbar-xft-git ttf-font-awesome dmenu2 neofetch-git --noconfirm
+sudo pacman -S compton 
+yaourt -S bspwm-git sxhkd-git lemonbar-xft-git ttf-font-awesome dmenu2 neofetch-git --noconfirm
 
 
 while read i; 
