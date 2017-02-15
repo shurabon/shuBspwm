@@ -19,51 +19,15 @@ fi
 
 
 
-#xsetroot -cursor_name left_ptr &
-#export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
+xsetroot -cursor_name left_ptr &
 xrdb merge .Xresources &
 compton -b &
-nitrogen --restore &
-#devmon &
-#i3lock-wait-for-suspend &
-#setxkbmap "us,ru" ",winkeys" "grp:caps_toggle" &
+feh --bg-scale ~/image.jpg
+devmon &
+i3lock-wait-for-suspend &
+setxkbmap "us,ru" ",winkeys" "grp:caps_toggle" &
 
 
-
-#export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-#if [ -x /usr/bin/xdg-user-dirs-update ]; then
-
-   /usr/bin/xdg-user-dirs-update
-#fi
-
- #Bspwm is kept as default
-session=${1:-bspwm}
-
-case $session in
-    awesome           ) exec awesome;;
-    bspwm             ) exec bspwm-session;;
-    catwm             ) exec catwm;;
-    spectrwm          ) exec spectrwm;;
-    cinnamon          ) exec cinnamon-session;;
-    dwm               ) exec dwm;;
-    enlightenment     ) exec enlightenment_start;;
-    ede               ) exec startede;;
-    fluxbox           ) exec startfluxbox;;
-    gnome             ) exec gnome-session;;
-    gnome-classic     ) exec gnome-session --session=gnome-classic;;
-    i3|i3wm           ) exec i3;;
-    icewm             ) exec icewm-session;;
-    jwm               ) exec jwm;;
-    kde               ) exec startkde;;
-    mate              ) exec mate-session;;
-    monster|monsterwm ) exec monsterwm;;
-    notion            ) exec notion;;
-    openbox           ) exec openbox-session;;
-    unity             ) exec unity;;
-    xfce|xfce4        ) exec startxfce4;;
-    xmonad            ) exec xmonad;;
-    # No known session, try to run it as command
-    *) exec $1;;
-esac
-
-
+ 
+sxhkd &
+bspwm
