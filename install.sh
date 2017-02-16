@@ -4,9 +4,19 @@
 # для автостарта иксов добавить [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx в нижнюю часть ~/.bash_profile  
 # установка необходимых компонентов 
 
-sudo pacman -S compton 
-yaourt -S bspwm-git sxhkd-git lemonbar-xft-git ttf-font-awesome dmenu2 neofetch-git --noconfirm
+#sudo pacman -S compton 
+#yaourt -S bspwm-git sxhkd-git lemonbar-xft-git ttf-font-awesome dmenu2 neofetch-git --noconfirm
 
+echo "Do you wish to install this program?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) echo "Yes is selected"; break;;
+        No ) echo "No is selected"; break;;
+    esac
+done
+
+
+#yaourt -S $(cat pkglist)
 
 while read i; 
  do 
@@ -22,7 +32,6 @@ while read i;
 
 # acpi compton 
 
-#mkdir $HOME/.config/bspwm/panel
 while read i; 
  do 
    if [ -f $HOME$i ]; then

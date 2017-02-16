@@ -5,3 +5,4 @@
 /.config/bspwm/panel/panel_colors.sh
 /.config/bspwm/panel/panel_p.sh
 /.xinitrc
+/image.jpg
