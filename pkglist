@@ -4,3 +4,5 @@ lemonbar-xft-git
 ttf-font-awesome 
 dmenu2 
 compton-git
+feh
+xfce4-terminal

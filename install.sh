@@ -10,7 +10,7 @@
 echo "Do you wish to install this program?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) yaourt -S $(cat pkglist); break;;
+        Yes ) yaourt -S $(cat pkglist) --noconfirm; break;;
         No ) echo "No is selected"; break;;
     esac
 done
@@ -41,6 +41,9 @@ while read i;
       ln -s $PWD$i $HOME$i
    fi    
  done < dotfiles.txt
+
+ sudo chmod +x ~/.config/bspwm/bspwmrc
+ sudo chmod +x ~/.config/sxhkd/sxhkdrc
 
 
 

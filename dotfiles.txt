@@ -6,3 +6,4 @@
 /.config/bspwm/panel/panel_p.sh
 /.xinitrc
 /image.jpg
+/.config/xfce4/terminal/terminalrc
