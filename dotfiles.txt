@@ -7,3 +7,4 @@
 /.xinitrc
 /image.jpg
 /.config/xfce4/terminal/terminalrc
+/.config/compton.conf

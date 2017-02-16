@@ -45,6 +45,11 @@ while read i;
  sudo chmod +x ~/.config/bspwm/bspwmrc
  sudo chmod +x ~/.config/sxhkd/sxhkdrc
 
+ for i in $(ls $PWD/usr/bin/); do
+   sudo rm -f /usr/bin/$i  
+   sudo ln -s $PWD/usr/bin/$i /usr/bin/$i 
+ done
+
 
 
 
