@@ -10,7 +10,7 @@
 echo "Do you wish to install this program?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) echo "Yes is selected"; break;;
+        Yes ) yaourt -S $(cat pkglist); break;;
         No ) echo "No is selected"; break;;
     esac
 done
