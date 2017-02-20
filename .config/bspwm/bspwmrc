@@ -112,10 +112,5 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 ##Adjust new window: splits biggest windows to keep windows about the same size
 #bspc config external_rules_command /usr/bin/adjust-new-window
 
-##Autostart apps
-#Keybindings daemon
-#sxhkd &
-#Source autostartfile. Uncomment this if you use bspwm-git
-#. $HOME/.config/bspwm/autostart
-#.reader.sh | lemonbar -f "fontawesome:size=18" -f "Cantarell:size=14" -g 1255x30+10+8 -p -u 4 &
-~/.config/bspwm/panel/panel_p.sh &
+### Launch polybar
+$HOME/.config/polybar/launch.sh

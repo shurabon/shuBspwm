@@ -1,6 +1,5 @@
 bspwm-git
-sxhkd-git 
-lemonbar-xft-git 
+sxhkd-git  
 ttf-font-awesome 
 dmenu2 
 compton-git
@@ -12,3 +11,4 @@ xdo
 xdotool
 fisherman
 dash
+polybar-git

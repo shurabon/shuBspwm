@@ -4,8 +4,7 @@
 # для автостарта иксов добавить [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx в нижнюю часть ~/.bash_profile  
 # установка необходимых компонентов 
 
-#sudo pacman -S compton 
-#yaourt -S bspwm-git sxhkd-git lemonbar-xft-git ttf-font-awesome dmenu2 neofetch-git --noconfirm
+
 
 echo "Do you wish to install this program?"
 select yn in "Yes" "No"; do
@@ -28,10 +27,6 @@ while read i;
  done < dir.txt
 
 
-
-
-# acpi compton 
-
 while read i; 
  do 
    if [ -f $HOME$i ]; then
@@ -44,6 +39,7 @@ while read i;
 
  sudo chmod +x ~/.config/bspwm/bspwmrc
  sudo chmod +x ~/.config/sxhkd/sxhkdrc
+ sudo chmod +x ~/.config/polybar/launch.sh
 
  for i in $(ls $PWD/usr/bin/); do
    sudo rm -f /usr/bin/$i  

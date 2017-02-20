@@ -1,10 +1,9 @@
 /.config/bspwm/bspwmrc
 /.config/sxhkd/sxhkdrc
 /.config/bspwm/propx.sh
-/.config/bspwm/panel/panel_bar.sh
-/.config/bspwm/panel/panel_colors.sh
-/.config/bspwm/panel/panel_p.sh
 /.xinitrc
 /image.jpg
 /.config/xfce4/terminal/terminalrc
 /.config/compton.conf
+/.config/polybar/config
+/.config/polybar/launch.sh
