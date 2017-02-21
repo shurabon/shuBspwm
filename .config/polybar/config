@@ -1,7 +1,7 @@
 [bar/top]
-width = 99%
+width = 98%
 height = 35
-offset-x = 10
+offset-x = 1%
 offset-y = 10 
 ;bottom = true
 
@@ -21,7 +21,7 @@ font-0 = Noto Sans:pixelsize=13;0
 font-1 = FontAwesome:size=12;-2
 font-2 = siji:pixelsize=10;0
 
-modules-left = bspwm xwindow
+modules-left = bspwm 
 modules-center = 
 modules-right = battery volume date powermenu
 

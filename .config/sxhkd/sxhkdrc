@@ -102,9 +102,6 @@ super + {m,n}
 alt + {_,shift + }Tab
     bspc node -f {next,prev}
 
-# Go to specific window
-super + Tab
-    rofi -show window -config ~/.local/rofi/config
 
 #Focus windows by direction, works with multihead
 
@@ -232,11 +229,11 @@ super + space
 alt + d
 	dmenu_recent -y 350 -h 25 -x 300 -w 800 -o 70 -fn "Ubuntu-12:normal" -nb '#000000' -nf '#ffffff' -sb '#F57900' -sf '#002b36'
 
+
+
 alt + m
     morc_menu
-
-alt + x
-    rofi -show run -config ~/.local/rofi/config
+ 
 
 alt + s
     ~/.config/bspwm/propx.sh
