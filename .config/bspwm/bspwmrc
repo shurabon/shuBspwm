@@ -4,6 +4,9 @@ PANEL_HEIGHT=40
 export gap
 export PANEL_HEIGHT
 
+
+
+
 #This creates negative padding equal to window gap so that gaps are shown only between windows and not on desktop edges.
 bspc config window_gap $gap;
 bspc config top_padding $(($PANEL_HEIGHT-$gap))
@@ -52,7 +55,7 @@ bspc monitor -d       
 bspc rule -a screenkey --unmanage
 #bspc rule -a sublime_text desktop=^5
 bspc rule -a gcolor2 state=floating center=true
-bspc rule -a lxappearance state=floating center=true
+bspc rule -a Lxappearance state=floating center=true
 bspc rule -a gmrun state=floating center=true
 bspc rule -a lxterminal state=floating center=true sticky=true
 #bspc rule -a urxvt state=floating center=true
@@ -85,13 +88,14 @@ bspc rule -a 9menu border=off manage=off
 bspc rule -a tint2 border=off manage=off
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
-bspc rule -a vivaldi-stable desktop=^1 #state=fullscreen
+bspc rule -a Vivaldi-stable desktop=^1 #state=fullscreen
 bspc rule -a Xfce4-terminal desktop=^2 follow=on
 bspc rule -a VirtualBox desktop=^5 state=floating
 bspc rule -a Brackets state=pseudo_tiled
 bspc rule -a vokoscreen state=pseudo_tiled
 bspc rule -a Atom desktop=^4
 bspc rule -a Transmission-gtk state=floating center=true
+bspc rule -a Wpg state=floating center=true
 
 
 

@@ -12,17 +12,20 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 [[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-if which dbus-launch >/dev/null && test -z "$DBUS_SESSION_BUS_ADDRESS"; then
-    eval "$(dbus-launch --sh-syntax --exit-with-session)"
+if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
+eval `dbus-launch --sh-syntax --exit-with-session`
+export DBUS_SESSION_BUS_ADDRESS
 fi
 
+bash ~/.wallpapers/wp_init.sh
 
 
 xsetroot -cursor_name left_ptr &
 xrdb merge .Xresources &
 compton -b &
-feh --bg-scale ~/image.jpg
+#feh --bg-scale ~/image.jpg
 devmon &
 i3lock-wait-for-suspend &
 setxkbmap "us,ru" ",winkeys" "grp:caps_toggle" &

@@ -4,12 +4,11 @@ ttf-font-awesome
 dmenu2 
 compton-git
 feh
-xfce4-terminal
 fish
 acpi
 xdo
 xdotool
-fisherman
 dash
 polybar-git
-rofi-git
+wpgtk-git
+termite-git

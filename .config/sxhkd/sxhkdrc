@@ -1,13 +1,17 @@
 # bspwm hotkeys
 #
 # Cleanly quit bspwm
+
+
+
+
 super + shift + q
 	bspc quit 1 && pkill lemonpanel && pkill lemonbar
 
 # Toggle panels
 super + shift + space
-	{pkill lemonpanel; pkill lemonbar; pkill cat; pkill stalonetray; bspc config top_padding $((-$gap)) ,\
-	bspc config top_padding $(($PANEL_HEIGHT-$gap)); lemonpanel & }
+	{pkill polybar; bspc config top_padding -5 ,\
+	bspc config top_padding 45; polybar -r top & }
 
 # Show keybindings
 super + F1
@@ -223,12 +227,13 @@ super + ctrl + button4
 #
 
 # run applications
-super + space
-	dmouse
+
+super + a
+    termite -e fish -c ~/.config/termite/config-ter 
+
 
 alt + d
-	dmenu_recent -y 350 -h 25 -x 300 -w 800 -o 70 -fn "Ubuntu-12:normal" -nb '#000000' -nf '#ffffff' -sb '#F57900' -sf '#002b36'
-
+    ~/.config/dmenu.sh
 
 
 alt + m
@@ -238,25 +243,22 @@ alt + m
 alt + s
     ~/.config/bspwm/propx.sh
 
-super + shift + Return
-	$TERMINAL
+
+alt + w
+    ~/images/rotate.sh
+
 super + z
 	xfce4-terminal #-x fish
 
 super + r
 	finder
 
-super + shift + b`
-	$BROWSER
 
 super + e
 	spacefm
 
-super + shift + e
-	$TERMINAL -e ranger
 
-Print
-	scrot -q 100
+
 
 
 #

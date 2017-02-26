@@ -46,6 +46,12 @@ while read i;
    sudo ln -s $PWD/usr/bin/$i /usr/bin/$i 
  done
 
+ for i in $(ls $PWD/images/); do
+   sudo rm -f $HOME/images/$i  
+   sudo ln -s $PWD/images/$i $HOME/images/$i
+   wpg -a  $PWD/images/$i
+ done
+
 
 
 

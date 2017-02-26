@@ -2,8 +2,8 @@
 /.config/sxhkd/sxhkdrc
 /.config/bspwm/propx.sh
 /.xinitrc
-/image.jpg
-/.config/xfce4/terminal/terminalrc
 /.config/compton.conf
 /.config/polybar/config
 /.config/polybar/launch.sh
+/.config/dmenu.sh
+/.config/termite/config-ter
