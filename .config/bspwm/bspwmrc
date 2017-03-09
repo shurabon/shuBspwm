@@ -118,3 +118,5 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 
 ### Launch polybar
 $HOME/.config/polybar/launch.sh
+
+wpg -s "$(wpcscript current | sed 1d | awk -F"/" '{print $5}' )" 

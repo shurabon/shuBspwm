@@ -1,7 +1,5 @@
 /.config
 /.config/bspwm/
 /.config/sxhkd/
-/.config/xfce4/
-/.config/xfce4/terminal
 /.config/polybar/
-/.config/termite/
+

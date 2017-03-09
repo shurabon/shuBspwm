@@ -32,8 +32,6 @@ while read i;
    if [ -f $HOME$i ]; then
       rm -f $HOME$i
       ln -s $PWD$i $HOME$i
-   else
-      ln -s $PWD$i $HOME$i
    fi    
  done < dotfiles.txt
 
