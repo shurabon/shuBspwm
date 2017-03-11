@@ -3,7 +3,7 @@
 # для автологина  sudo systemctl enable xlogin@user (должен быть установлен xlogin-git). 
 # для автостарта иксов добавить [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx в нижнюю часть ~/.bash_profile  
 # установка необходимых компонентов 
-
+# для установки в virtualbox необходимы следующие пакеты: virtualbox guest utils, virtualbox guest iso, virtualbox guest modules arch
 
 
 echo "Do you wish to install this program?"
@@ -20,7 +20,7 @@ done
 while read i; 
  do 
    if [ -d $HOME$i ]; then
-      echo "Директория $i существует"
+      echo "Dir $i is exist"
    else
       mkdir $HOME$i
    fi    
@@ -32,6 +32,7 @@ while read i;
    if [ -f $HOME$i ]; then
       rm -f $HOME$i
       ln -s $PWD$i $HOME$i
+      echo "ln $PWD$i $HOME$i is made"
    fi    
  done < dotfiles.txt
 
@@ -43,12 +44,16 @@ while read i;
    sudo rm -f /usr/bin/$i  
    sudo ln -s $PWD/usr/bin/$i /usr/bin/$i 
  done
+ 
 
- for i in $(ls $PWD/images/); do
-   sudo rm -f $HOME/images/$i  
-   sudo ln -s $PWD/images/$i $HOME/images/$i
-   wpg -a  $PWD/images/$i
- done
+echo "Do you wish to generate color schemes?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) for i in $(ls $PWD/images/); do sudo rm -f $HOME/images/$i;  sudo ln -s $PWD/images/$i $HOME/images/$i; wpg -a  $PWD/images/$i; done; break;;
+        No ) echo "No is selected"; break;;
+    esac
+done
+
 
 
 
