@@ -33,7 +33,9 @@ do
       ln -s $PWD$i $HOME$i
       echo "ln $PWD$i $HOME$i is made"
    else
-      echo $PWD$i $HOME$i 
+
+      ln -s $PWD$i $HOME$i 
+      echo "New ln $PWD$i $HOME$i is made"
    fi    
 done
 
