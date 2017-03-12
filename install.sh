@@ -26,15 +26,14 @@ while read i;
    fi    
  done < $PWD/dir.txt
 
-
-while read i; 
- do 
+for i in $(cat $PWD/dotfiles.txt)
+do
    if [ -f $HOME$i ]; then
       rm -f $HOME$i
       ln -s $PWD$i $HOME$i
       echo "ln $PWD$i $HOME$i is made"
    fi    
- done < $PWD/dotfiles.txt
+done
 
  sudo chmod +x ~/.config/bspwm/bspwmrc
  sudo chmod +x ~/.config/sxhkd/sxhkdrc
