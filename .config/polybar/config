@@ -1,6 +1,6 @@
 [bar/top]
 width = 98%
-height = 35
+height = 37
 offset-x = 1%
 offset-y = 10 
 ;bottom = true

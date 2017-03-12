@@ -24,7 +24,7 @@ while read i;
    else
       mkdir $HOME$i
    fi    
- done < dir.txt
+ done < $PWD/dir.txt
 
 
 while read i; 
@@ -34,7 +34,7 @@ while read i;
       ln -s $PWD$i $HOME$i
       echo "ln $PWD$i $HOME$i is made"
    fi    
- done < dotfiles.txt
+ done < $PWD/dotfiles.txt
 
  sudo chmod +x ~/.config/bspwm/bspwmrc
  sudo chmod +x ~/.config/sxhkd/sxhkdrc

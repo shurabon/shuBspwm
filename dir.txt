@@ -2,4 +2,6 @@
 /.config/bspwm/
 /.config/sxhkd/
 /.config/polybar/
+/.config/termite/
+/images/
 
