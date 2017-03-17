@@ -1,1 +1,48 @@
-/home/shu/.themes/color_other/config-ter
+[options]
+
+font = Ubuntu Mono 12
+
+[colors]
+
+foreground = #a09454
+background = rgba(0 ,0 ,0 ,0.85)
+
+[colors]
+
+# special
+foreground      = #a0833f
+foreground_bold = #c5c8c6
+cursor          = #a08a58
+#background      = #1d1f21
+
+# black
+#color0  = #201d0c
+#color8  = #847451
+
+# red
+#color1  = #a09454
+#color9  = #c8a350
+
+# green
+#color2  = #a08e53
+#color10 = #c8ae7c
+
+# yellow
+#color3  = #a08746
+#color11 = #c8a86c
+
+# blue
+#color4  = #a0936a
+#color12 = #c8a765
+
+# magenta
+#color5  = #a08a58
+#color13 = #c8a565
+
+# cyan
+#color6  = #a0833f
+#color14 = #c8a972
+
+# white
+#color7  = #a0936f
+#color15 = #d1b074

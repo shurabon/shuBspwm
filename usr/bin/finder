@@ -10,7 +10,7 @@ eval $(xdotool getmouselocation --shell)
 menu_widht=600
 monitor_widht=$(wattr w $(lsw -r))
 monitor_height=$(wattr h $(lsw -r))
-lines=20
+lines=15
 menu_height=$(( $lines * 23 ))
 maxx=$(( $monitor_widht - $menu_widht ))
 miny=$PANEL_HEIGHT
@@ -21,4 +21,4 @@ YP=$Y
 [[ $YP -lt $miny ]] && YP=$miny
 [[ $YP -gt $maxy ]] && YP=$maxy
 
-find ~/ | sed 's/ /\\ /g' | sort -f | dmenu -i -l $lines -y $YP -x $XP -w $menu_widht -fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMENU_SB | xargs xdg-open
+find ~/ | sed 's/ /\\ /g' | sort -f | dmenu -i -l $lines -y 300 -x 300 -o $DMENU_O -w 800 -fn $DMENU_FN -nb $DMENU_NB -nf $DMENU_NF -sf $DMENU_SF -sb $DMENU_SB | xargs xdg-open

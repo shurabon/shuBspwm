@@ -250,7 +250,7 @@ alt + w
 super + z
 	xfce4-terminal #-x fish
 
-super + r
+alt + f
 	finder
 
 

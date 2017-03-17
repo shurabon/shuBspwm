@@ -1,3 +1,0 @@
-#!/bin/bash
-
-dmenu_recent -y 350 -h 25 -x 300 -w 800 -o 70 -fn "Ubuntu-12:normal" -nb '#000000' -nf '#ffffff' -sb '#F57900' -sf '#002b36'

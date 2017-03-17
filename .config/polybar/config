@@ -9,7 +9,7 @@ offset-y = 10
 
 
 
-background = #cc201d0f
+background = #cc201d11
 
 foreground = #eee
 
@@ -43,7 +43,7 @@ scroll-down = bspwm-deskprev
 ; MODULES
 
 [colors]
-COL0=#201d0f
+COL0=#201d11
 FUCK=#86650a
 COL1=#a07f0d
 COL9=#6c98c8
