@@ -20,7 +20,7 @@ done
 while read i; 
  do 
    if [ -d $HOME$i ]; then
-      echo "Директория $i существует"
+      echo "Directory $i is exist"
    else
       mkdir $HOME$i
    fi    
