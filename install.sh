@@ -23,6 +23,7 @@ while read i;
       echo "Directory $i is exist"
    else
       mkdir $HOME$i
+      echo "The directory $i has been done"
    fi    
  done < dir.txt
 
@@ -30,7 +31,11 @@ while read i;
 while read i; 
  do 
    if [ -f $HOME$i ]; then
+      echo "The file $i is exist and will be delete"
       rm -f $HOME$i
+      ln -s $PWD$i $HOME$i
+   else
+      echo "The file $ is NOT exist and will be created symbolic link"
       ln -s $PWD$i $HOME$i
    fi    
  done < dotfiles.txt
@@ -42,6 +47,7 @@ while read i;
  for i in $(ls $PWD/usr/bin/); do
    sudo rm -f /usr/bin/$i  
    sudo ln -s $PWD/usr/bin/$i /usr/bin/$i 
+   echo "file $i has been created in /usr/bin"
  done
 
  for i in $(ls $PWD/images/); do
